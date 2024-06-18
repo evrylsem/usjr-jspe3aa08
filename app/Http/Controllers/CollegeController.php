@@ -19,10 +19,10 @@ class CollegeController extends Controller
         return view('college.index', compact('colleges'));
     }
 
-    public function showStudList()
+    public function showDetails($id)
     {
-        $students = Student::with('college')->get();
-        return view('student.index', compact('students'));
+        $colleges = College::findOrFail($id);
+        return view('college.show', compact('colleges'));
 
     }
     

@@ -17,7 +17,7 @@
             <tr>
                 <td>{{$college->collshortname}}</td>
                 <td>{{$college->collfullname}}</td>
-                <td><a href="">Expand</a></td>
+                <td><a href="{{route('college.show', ['id' => $college->collid])}}">Expand</a></td>
             </tr>
             
             @endforeach
