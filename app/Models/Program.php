@@ -11,11 +11,11 @@ class Program extends Model
     protected $fillable = ['progfullname', 'progshortname'];
     public function college()
     {
-        return $this->belongsTo(College::class, 'progcollid', 'progid');
+        return $this->belongsTo(College::class, 'progcollid', 'collid');
     }
 
     public function departments()
     {
-        return $this->belongsTo(Department::class, 'progcolldeptid', 'progid');
+        return $this->belongsTo(Department::class, 'progcolldeptid', 'deptid');
     }
 }
