@@ -8,5 +8,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/show/students/all', [StudentController::class, 'showStudents']);
+Route::get('/show/students/all', [StudentController::class, 'showStudents'])->name('student.index');
 Route::get('/show/colleges', [CollegeController::class, 'showColleges']);
+Route::get('/show/student/{id}', [StudentController::class, 'showDetails'])->name('student.show');

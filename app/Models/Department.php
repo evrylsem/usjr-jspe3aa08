@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 class Department extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'deptid';
     protected $fillable = ['deptfullname', 'deptshortname'];
     public function colleges()
     {

@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 class College extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'collid';
     protected $fillable = ['collfullname', 'collshortname'];
     // public function students()
     // {

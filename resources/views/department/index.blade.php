@@ -24,7 +24,6 @@
                     <!-- <td>{{$student->studprogid}}</td> -->
                     <td>{{$student->colleges->collfullname}}</td>
                     <td>{{$student->studyear}}</td>
-                    <td><a href="{{route('student.show', ['id' => $student->studid])}}">Expand</a></td>
                 </tr>
             @endforeach
         </tbody>

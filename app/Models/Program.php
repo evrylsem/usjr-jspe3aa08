@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Program extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'progid';
     protected $fillable = ['progfullname', 'progshortname'];
     public function college()
     {
