@@ -11,7 +11,7 @@
             <td>First Name</td>
             <td>Last Name</td>
             <td>Middle Name</td>
-            <td>Program</td>
+            <!-- <td>Program</td> -->
             <td>College</td>
             <td>Year</td>
         </thead>
@@ -21,9 +21,9 @@
                     <td>{{$student->studfirstname}}</td>
                     <td>{{$student->studlastname}}</td>
                     <td>{{$student->studmidname}}</td>
-                    <td>{{$student->studprogid}}</td>
-                    <td>{{$student->college->name}}</td>
-                    <td>{{$student->year}}</td>
+                    <!-- <td>{{$student->studprogid}}</td> -->
+                    <td>{{$student->colleges->collfullname}}</td>
+                    <td>{{$student->studyear}}</td>
                 </tr>
             @endforeach
         </tbody>

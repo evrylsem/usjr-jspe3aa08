@@ -11,11 +11,11 @@ use Illuminate\Database\Eloquent\Model;
 class College extends Model
 {
     use HasFactory;
-    protected $fillable = ['collid','collfullname', 'collshortname'];
-    public function students()
-    {
-        return $this->hasMany(Student::class, 'studcollid', 'studid');
-    }
+    protected $fillable = ['collfullname', 'collshortname'];
+    // public function students()
+    // {
+    //     return $this->hasMany(Student::class, 'studcollid', 'collid');
+    // }
 
     public function departments()
     {

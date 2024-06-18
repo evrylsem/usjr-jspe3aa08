@@ -14,11 +14,11 @@ class Department extends Model
     protected $fillable = ['deptfullname', 'deptshortname'];
     public function colleges()
     {
-        return $this->belongsTo(College::class, 'deptcollid', 'collid');
+        return $this->belongsTo(College::class, 'deptcollid', 'deptid');
     }
 
     public function programs()
     {
-        return $this->hasMany(Program::class, 'progcolldeptid', 'progid');
+        return $this->hasMany(Program::class, 'progcolldeptid', 'deptid');
     }
 }

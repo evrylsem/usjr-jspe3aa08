@@ -11,8 +11,11 @@ class StudentController extends Controller
 {
     public function showStudents()
     {
-        $students = Student::all();
-        $colleges = Student::with('colleges')->get();
-        return view('student.index', compact('students', 'colleges'));
+        // $students = Student::all();
+        // $colleges = College::findOrFail($id);
+        // $students = $colleges->students()->get();
+        $students = Student::with('colleges')->get();
+        // return view('student.index', compact('colleges','students'));
+        return view('student.index', compact('students'));
     }
 }
